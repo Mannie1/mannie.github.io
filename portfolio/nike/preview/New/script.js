@@ -50,22 +50,17 @@
 document.getElementById("btn").onclick = () => {
     var num1 = parseInt(document.getElementById("num1").value);
     var num2 = parseInt(document.getElementById("num2").value);
-    var add = document.getElementById("operate").value;
-    var sub= document.getElementById("please").value;
-    var divide = document.getElementById("effing").value;
-    var multiply = document.getElementById("cunt").value;
-    document.getElementById("result").value = result;
+    var operate = document.getElementById("operate").value;
+    var result;
 
-    if (add === "+") {
-        document.getElementById("result").value = num1 + num2;
-    }
-    if (sub === "-") {
-        document.getElementById("result").value = num1 - num2;
-    }
-    if (divide === "/") {
-        document.getElementById("result").value = num1 / num2;
-    }
-    if (multiply === "*") {
-        document.getElementById("result").value = num1 * num2;
-    }
+    if (operate === '+') {
+        result = num1 + num2;
+    } else if (operate === '-') {
+        result = num1 - num2;
+    } else if (operate === '*') {
+        result = num1 * num2;
+    } else if (operate === '/') {
+        result = num1 / num2;
+    };
+    document.getElementById("result").value = result;
 };
